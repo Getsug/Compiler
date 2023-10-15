@@ -1,0 +1,94 @@
+1:  /* A program to perform Euclid's 
+2:  Algorithm to compute gcd */
+3:  
+4:  int gcd (int u, int v)
+	4:  reserved word: int
+	4:  ID: gcd
+	4:  (
+	4:  reserved word: int
+	4:  ID: u
+	4:  ,
+	4:  reserved word: int
+	4:  ID: v
+	4:  )
+5:  {   if (v/0!pp) return u;
+	5:  {
+	5:  reserved word: if
+	5:  (
+	5:  ID: v
+	5:  /
+	5:  NUM: 0
+	5:  !
+	5:  ID: pp
+	5:  )
+	5:  reserved word: return
+	5:  ID: u
+	5:  ;
+6:      else return gcd(v, u-u/v*v);
+	6:  reserved word: else
+	6:  reserved word: return
+	6:  ID: gcd
+	6:  (
+	6:  ID: v
+	6:  ,
+	6:  ID: u
+	6:  -
+	6:  ID: u
+	6:  /
+	6:  ID: v
+	6:  *
+	6:  ID: v
+	6:  )
+	6:  ;
+7:      /* u-u/v*v == u mod v */
+8:  }
+	8:  }
+9:  
+10:  /**test*/*/
+	10:  *
+	10:  /
+11:  
+12:  void main(void##)
+	12:  reserved word: void
+	12:  ID: main
+	12:  (
+	12:  reserved word: void
+	12:  #(ERROR)
+	12:  #(ERROR)
+	12:  )
+13:  {   int x; int y;
+	13:  {
+	13:  reserved word: int
+	13:  ID: x
+	13:  ;
+	13:  reserved word: int
+	13:  ID: y
+	13:  ;
+14:      x=input(); y=input();
+	14:  ID: x
+	14:  =
+	14:  ID: input
+	14:  (
+	14:  )
+	14:  ;
+	14:  ID: y
+	14:  =
+	14:  ID: input
+	14:  (
+	14:  )
+	14:  ;
+15:      output(gcd(x,y));
+	15:  ID: output
+	15:  (
+	15:  ID: gcd
+	15:  (
+	15:  ID: x
+	15:  ,
+	15:  ID: y
+	15:  )
+	15:  )
+	15:  ;
+16:  }
+	16:  }
+17:  
+18:  EOF

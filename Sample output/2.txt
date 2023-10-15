@@ -1,0 +1,287 @@
+1:  /* A program to perform selection sort on a 10
+2:     element array. */
+3:  
+4:  int x[10];
+	4:  reserved word: int
+	4:  ID: x
+	4:  [
+	4:  NUM: 10
+	4:  ]
+	4:  ;
+5:  
+6:  int minloc ( int a[], int low, int high )
+	6:  reserved word: int
+	6:  ID: minloc
+	6:  (
+	6:  reserved word: int
+	6:  ID: a
+	6:  [
+	6:  ]
+	6:  ,
+	6:  reserved word: int
+	6:  ID: low
+	6:  ,
+	6:  reserved word: int
+	6:  ID: high
+	6:  )
+7:  {	int i; int x; int k;
+	7:  {
+	7:  reserved word: int
+	7:  ID: i
+	7:  ;
+	7:  reserved word: int
+	7:  ID: x
+	7:  ;
+	7:  reserved word: int
+	7:  ID: k
+	7:  ;
+8:  	k = low;
+	8:  ID: k
+	8:  =
+	8:  ID: low
+	8:  ;
+9:  	x = a[low];
+	9:  ID: x
+	9:  =
+	9:  ID: a
+	9:  [
+	9:  ID: low
+	9:  ]
+	9:  ;
+10:  	i = low + 1;
+	10:  ID: i
+	10:  =
+	10:  ID: low
+	10:  +
+	10:  NUM: 1
+	10:  ;
+11:  	while (i < high)
+	11:  reserved word: while
+	11:  (
+	11:  ID: i
+	11:  <
+	11:  ID: high
+	11:  )
+12:  	{	if (a[i] < x)
+	12:  {
+	12:  reserved word: if
+	12:  (
+	12:  ID: a
+	12:  [
+	12:  ID: i
+	12:  ]
+	12:  <
+	12:  ID: x
+	12:  )
+13:  			{ x = a[i];
+	13:  {
+	13:  ID: x
+	13:  =
+	13:  ID: a
+	13:  [
+	13:  ID: i
+	13:  ]
+	13:  ;
+14:  			  k = i;  }
+	14:  ID: k
+	14:  =
+	14:  ID: i
+	14:  ;
+	14:  }
+15:  		i = i + 1;
+	15:  ID: i
+	15:  =
+	15:  ID: i
+	15:  +
+	15:  NUM: 1
+	15:  ;
+16:  	}
+	16:  }
+17:  	return k;
+	17:  reserved word: return
+	17:  ID: k
+	17:  ;
+18:  }
+	18:  }
+19:  
+20:  void sort( int a[], int low, int high)
+	20:  reserved word: void
+	20:  ID: sort
+	20:  (
+	20:  reserved word: int
+	20:  ID: a
+	20:  [
+	20:  ]
+	20:  ,
+	20:  reserved word: int
+	20:  ID: low
+	20:  ,
+	20:  reserved word: int
+	20:  ID: high
+	20:  )
+21:  {	int i; int k;
+	21:  {
+	21:  reserved word: int
+	21:  ID: i
+	21:  ;
+	21:  reserved word: int
+	21:  ID: k
+	21:  ;
+22:  	i = low;	
+	22:  ID: i
+	22:  =
+	22:  ID: low
+	22:  ;
+23:  
+24:  	while (i < high-1)
+	24:  reserved word: while
+	24:  (
+	24:  ID: i
+	24:  <
+	24:  ID: high
+	24:  -
+	24:  NUM: 1
+	24:  )
+25:  	{	int t;
+	25:  {
+	25:  reserved word: int
+	25:  ID: t
+	25:  ;
+26:  		k = minloc(a,i,high,i);
+	26:  ID: k
+	26:  =
+	26:  ID: minloc
+	26:  (
+	26:  ID: a
+	26:  ,
+	26:  ID: i
+	26:  ,
+	26:  ID: high
+	26:  ,
+	26:  ID: i
+	26:  )
+	26:  ;
+27:  		t = a[k];
+	27:  ID: t
+	27:  =
+	27:  ID: a
+	27:  [
+	27:  ID: k
+	27:  ]
+	27:  ;
+28:  		a[k] = a[i];
+	28:  ID: a
+	28:  [
+	28:  ID: k
+	28:  ]
+	28:  =
+	28:  ID: a
+	28:  [
+	28:  ID: i
+	28:  ]
+	28:  ;
+29:  		a[i] = t;
+	29:  ID: a
+	29:  [
+	29:  ID: i
+	29:  ]
+	29:  =
+	29:  ID: t
+	29:  ;
+30:  		i = i + 1;
+	30:  ID: i
+	30:  =
+	30:  ID: i
+	30:  +
+	30:  NUM: 1
+	30:  ;
+31:  	}
+	31:  }
+32:  }
+	32:  }
+33:  
+34:  void main(void)
+	34:  reserved word: void
+	34:  ID: main
+	34:  (
+	34:  reserved word: void
+	34:  )
+35:  {	int i;
+	35:  {
+	35:  reserved word: int
+	35:  ID: i
+	35:  ;
+36:  	i = 0;
+	36:  ID: i
+	36:  =
+	36:  NUM: 0
+	36:  ;
+37:  	while (i < 10)
+	37:  reserved word: while
+	37:  (
+	37:  ID: i
+	37:  <
+	37:  NUM: 10
+	37:  )
+38:  	{	x[i] = input();
+	38:  {
+	38:  ID: x
+	38:  [
+	38:  ID: i
+	38:  ]
+	38:  =
+	38:  ID: input
+	38:  (
+	38:  )
+	38:  ;
+39:  		i = i + 1; }
+	39:  ID: i
+	39:  =
+	39:  ID: i
+	39:  +
+	39:  NUM: 1
+	39:  ;
+	39:  }
+40:  	sort(x,0,10);
+	40:  ID: sort
+	40:  (
+	40:  ID: x
+	40:  ,
+	40:  NUM: 0
+	40:  ,
+	40:  NUM: 10
+	40:  )
+	40:  ;
+41:  	i = 0;
+	41:  ID: i
+	41:  =
+	41:  NUM: 0
+	41:  ;
+42:  	while (i < 10)
+	42:  reserved word: while
+	42:  (
+	42:  ID: i
+	42:  <
+	42:  NUM: 10
+	42:  )
+43:  	{	output(x[i]);
+	43:  {
+	43:  ID: output
+	43:  (
+	43:  ID: x
+	43:  [
+	43:  ID: i
+	43:  ]
+	43:  )
+	43:  ;
+44:  		i = i + 1; }
+	44:  ID: i
+	44:  =
+	44:  ID: i
+	44:  +
+	44:  NUM: 1
+	44:  ;
+	44:  }
+45:  }
+	45:  }
+46:  EOF
