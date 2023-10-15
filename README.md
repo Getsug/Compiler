@@ -1,2 +1,2 @@
 ## Compiler
-compiler work conatining a scanner
+compiler work containing a scanner
