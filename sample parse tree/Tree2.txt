@@ -1,0 +1,219 @@
+
+>>>Syntax error at line 9: unexpected token (factor) -> 	9:  ;
+
+>>>Syntax error at line 10: unexpected token (match) -> 	10:  ID: i
+      
+>>>Syntax error at line 10: unexpected token (match) -> 	10:  ID: i
+      
+>>>Syntax error at line 12: unexpected token (factor) -> 	12:  <
+
+>>>Syntax error at line 12: unexpected token (match) -> 	12:  ID: x
+      
+>>>Syntax error at line 12: unexpected token (match) -> 	12:  ID: x
+      
+>>>Syntax error at line 13: unexpected token (factor) -> 	13:  {
+
+>>>Syntax error at line 13: unexpected token (match) -> 	13:  ID: x
+      
+>>>Syntax error at line 13: unexpected token (factor) -> 	13:  ;
+
+>>>Syntax error at line 14: unexpected token (match) -> 	14:  ID: k
+      
+>>>Syntax error at line 14: unexpected token (match) -> 	14:  ID: k
+      
+>>>Syntax error at line 17: unexpected token (type_spec) -> 	17:  reserved word: return
+
+>>>Syntax error at line 18: unexpected token (type_spec) -> 	18:  }
+
+>>>Syntax error at line 20: unexpected token (match) -> 	20:  reserved word: void
+      
+>>>Syntax error at line 20: unexpected token (declaration) -> 	20:  reserved word: void
+
+>>>Syntax error at line 20: unexpected token (type_spec) -> 	20:  ID: sort
+
+>>>Syntax error at line 20: unexpected token (match) -> 	20:  (
+      
+>>>Syntax error at line 26: unexpected token (factor) -> 	26:  ;
+
+>>>Syntax error at line 27: unexpected token (match) -> 	27:  ID: t
+      
+>>>Syntax error at line 27: unexpected token (match) -> 	27:  ID: t
+      
+>>>Syntax error at line 27: unexpected token (factor) -> 	27:  ;
+
+>>>Syntax error at line 28: unexpected token (match) -> 	28:  ID: a
+      
+>>>Syntax error at line 28: unexpected token (match) -> 	28:  ID: a
+      
+>>>Syntax error at line 28: unexpected token (factor) -> 	28:  =
+
+>>>Syntax error at line 28: unexpected token (match) -> 	28:  ID: a
+      
+>>>Syntax error at line 28: unexpected token (match) -> 	28:  ID: a
+      
+>>>Syntax error at line 28: unexpected token (factor) -> 	28:  ;
+
+>>>Syntax error at line 29: unexpected token (match) -> 	29:  ID: a
+      
+>>>Syntax error at line 29: unexpected token (match) -> 	29:  ID: a
+      
+>>>Syntax error at line 29: unexpected token (factor) -> 	29:  =
+
+>>>Syntax error at line 29: unexpected token (match) -> 	29:  ID: t
+      
+>>>Syntax error at line 29: unexpected token (match) -> 	29:  ID: t
+      
+>>>Syntax error at line 38: unexpected token (factor) -> 	38:  =
+
+>>>Syntax error at line 38: unexpected token (match) -> 	38:  ID: input
+      
+>>>Syntax error at line 38: unexpected token (match) -> 	38:  ID: input
+      
+>>>Syntax error at line 40: unexpected token (factor) -> 	40:  ;
+
+>>>Syntax error at line 41: unexpected token (match) -> 	41:  ID: i
+      
+>>>Syntax error at line 41: unexpected token (match) -> 	41:  ID: i
+      
+>>>Syntax error at line 43: unexpected token (factor) -> 	43:  )
+
+>>>Syntax error at line 43: unexpected token (match) -> 	43:  ;
+      
+>>>Syntax error at line 43: unexpected token (match) -> 	43:  ;
+      
+Syntax Tree
+  Array Var Declaration, name : x, type : int, size : 10
+  Function Declaration, name : minloc, type : int
+    Array Parameter, name : a, type : int
+    Single Parameter, name : low, type : int
+    Single Parameter, name : high, type : int
+    Compound Statement :
+      Var Declaration, name : i, type : int
+      Var Declaration, name : x, type : int
+      Var Declaration, name : k, type : int
+      Assign : (destination) (source) 
+        Id : k
+        Id : low
+      Assign : (destination) (source) 
+        Id : x
+        Id : a
+          Op: 
+            Id : low
+      Assign : (destination) (source) 
+        Id : i
+        Op: 
+          Id : low
+          Const : 1
+      While (expressioin) statement 
+        Op: 
+          Id : i
+          Id : high
+        Compound Statement :
+          If (expression) statement
+            Id : a
+              Op: 
+                Id : i
+            Op: 
+              Id : x
+          Assign : (destination) (source) 
+            Id : x
+            Id : a
+              Op: 
+                Id : i
+          Assign : (destination) (source) 
+            Id : k
+            Id : i
+      Assign : (destination) (source) 
+        Id : i
+        Op: 
+          Id : i
+          Const : 1
+  Var Declaration, name : k, type : void
+  Function Declaration, name : (, type : void
+    Array Parameter, name : a, type : int
+    Single Parameter, name : low, type : int
+    Single Parameter, name : high, type : int
+    Compound Statement :
+      Var Declaration, name : i, type : int
+      Var Declaration, name : k, type : int
+      Assign : (destination) (source) 
+        Id : i
+        Id : low
+      While (expressioin) statement 
+        Op: 
+          Id : i
+          Op: 
+            Id : high
+            Const : 1
+        Compound Statement :
+          Var Declaration, name : t, type : int
+          Assign : (destination) (source) 
+            Id : k
+            Call, name : minloc, with arguments below
+              Id : a
+              Id : i
+              Op: 
+                Id : high
+          Assign : (destination) (source) 
+            Id : t
+            Id : a
+              Op: 
+                Id : k
+          Id : a
+            Op: 
+              Id : k
+          Id : a
+            Op: 
+              Id : i
+          Id : a
+            Op: 
+              Id : i
+          Id : t
+          Assign : (destination) (source) 
+            Id : i
+            Op: 
+              Id : i
+              Const : 1
+  Function Declaration, name : main, type : void
+    Single Parameter, name : (null), type : void
+    Compound Statement :
+      Var Declaration, name : i, type : int
+      Assign : (destination) (source) 
+        Id : i
+        Const : 0
+      While (expressioin) statement 
+        Op: 
+          Id : i
+          Const : 10
+        Compound Statement :
+          Id : x
+            Op: 
+              Id : i
+          Call, name : input, with NOTHING
+          Assign : (destination) (source) 
+            Id : i
+            Op: 
+              Id : i
+              Const : 1
+      Call, name : sort, with arguments below
+        Id : x
+        Const : 0
+        Op: 
+          Const : 10
+      Assign : (destination) (source) 
+        Id : i
+        Const : 0
+      While (expressioin) statement 
+        Op: 
+          Id : i
+          Const : 10
+        Compound Statement :
+          Call, name : output, with arguments below
+            Id : x
+              Op: 
+                Id : i
+          Assign : (destination) (source) 
+            Id : i
+            Op: 
+              Id : i
+              Const : 1

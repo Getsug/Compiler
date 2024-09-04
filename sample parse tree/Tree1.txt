@@ -1,0 +1,51 @@
+
+>>>Syntax error at line 6: unexpected token (factor) -> 	6:  ;
+
+>>>Syntax error at line 8: unexpected token (match) -> 	8:  }
+      
+>>>Syntax error at line 8: unexpected token (match) -> 	8:  }
+      
+>>>Syntax error at line 13: unexpected token (factor) -> 	13:  )
+
+>>>Syntax error at line 13: unexpected token (match) -> 	13:  ;
+      
+>>>Syntax error at line 13: unexpected token (match) -> 	13:  ;
+      
+Syntax Tree
+  Function Declaration, name: gcd, type: int
+    Single Parameter, name: u, type : int
+    Single Parameter, name: v, type : int
+    Compound Statement:
+      If (expression) statement else 
+        Op: 
+          ID: v
+          Constant: 0
+        Return Statement- with values
+          ID: u
+        Return Statement- with values
+          Call, name: gcd, with arguments
+            ID: v
+            Op: 
+              Op: 
+                ID: u
+                Op: 
+                  Op: 
+                    ID: u
+                    ID: v
+                  ID: v
+  Function Declaration, name: main, type: void
+    Single Parameter, name: (null), type : void
+    Compound Statement:
+      Varriable Declaration, name: x, type : int
+      Varriable Declaration, name: y, type : int
+      Assign: (destination) (source) 
+        ID: x
+        Call, name: input, without arguments
+      Assign: (destination) (source) 
+        ID: y
+        Call, name: input, without arguments
+      Call, name: output, with arguments
+        Call, name: gcd, with arguments
+          ID: x
+          Op: 
+            ID: y
